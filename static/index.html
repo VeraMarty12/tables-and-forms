@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Форма выбора питомца</title>
@@ -9,7 +9,67 @@
 <main>
     <h1>Найди себе друга!</h1>
 
-    <!--Форму размещай тут-->
+    <form action="/pets/orders" method="POST">
+        <div>
+            <label for="petType">Тип питомца:</label>
+            <select id="petType" name="petType">
+                <option value="cat" selected>Кошка</option>
+                <option value="dog">Собака</option>
+                <option value="tiger">Тигр</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Пол питомца:</label>
+            <label>
+                <input type="radio" name="gender" value="boy" checked> Мальчик
+            </label>
+            <label>
+                <input type="radio" name="gender" value="girl"> Девочка
+            </label>
+        </div>
+
+        <div>
+            <label for="eyeColor">Цвет глаз:</label>
+            <input type="text" id="eyeColor" name="eyeColor" placeholder="#ff0000" value="#4a90d9">
+        </div>
+
+        <div>
+            <label for="tailLength">Длина хвоста (см):</label>
+            <input type="number" id="tailLength" name="tailLength" placeholder="7-120" value="15">
+        </div>
+
+        <div>
+            <label for="name">Имя питомца:</label>
+            <input type="text" id="name" name="name" placeholder="от 3 до 50 символов" value="Барсик">
+        </div>
+
+        <div>
+            <label for="dateOfBirth">Дата рождения:</label>
+            <input type="text" id="dateOfBirth" name="dateOfBirth" placeholder="01.01.2020" value="25.04.2020">
+        </div>
+
+        <div>
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 XXX XXX-XX-XX" value="+7 922 123-45-67">
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.ru" value="pet@mail.com">
+        </div>
+
+        <div>
+            <label>
+                <input type="checkbox" name="rules" value="true" checked> Я согласен с правилами
+            </label>
+        </div>
+
+        <div>
+            <button type="submit">Отправить заказ</button>
+            <button type="reset">Сбросить значения</button>
+        </div>
+    </form>
 
 </main>
 </body>
